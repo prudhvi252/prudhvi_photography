@@ -1,11 +1,11 @@
-# Wedding Photography Website - Aleksandar Nikolic
+# Wedding Photography Website - Prudhvi Adari
 
 This project is a modern and professional website designed for wedding photography services. The website is built using React, CSS Modules, and various other tools to ensure responsiveness, animations, and ease of use. The website showcases photography portfolios, service packages, testimonials, a contact form, and more.
 
 ## Features
 
 - **Hero Section**: A professional hero section with a welcoming message.
-- **About Section**: Details about Aleksandar Nikolic, the photographer, and his experience.
+- **About Section**: Details about Prudhvi Adari, the photographer, and his experience.
 - **Services Section**: A list of services offered, each with detailed descriptions.
 - **Gallery Section**: Display of wedding photography in a clean, grid-based gallery.
 - **Video Gallery**: A section dedicated to showcasing videos.
@@ -13,7 +13,7 @@ This project is a modern and professional website designed for wedding photograp
 - **Pricing**: Transparent pricing information with different packages.
 - **Contact Form**: A form for clients to get in touch or book a service package.
 - **FAQ Section**: Frequently asked questions to provide information to visitors.
-- **Collaborators/Partners Section**: Highlighting collaborators, such as Web Developer Alexandru Gheorghe.
+- **Collaborators/Partners Section**: Highlighting collaborators, such as Web Developer Prudhvi Adari.
 - **Scroll to Top Button**: Easy navigation back to the top of the page.
 - **Responsive Design**: The website is fully responsive and works seamlessly on all devices.
 
@@ -33,8 +33,4 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/username/wedding-photography-website.git
    ```
-
-## Deployment
-
-The project is deployed on Netlify and can be accessed at:
-https://aleks-nikolic.netlify.app/
+   
