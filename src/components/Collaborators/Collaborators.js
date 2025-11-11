@@ -27,7 +27,7 @@ function Collaborators() {
           <h3>Web Developer Prudhvi Adari</h3>
           <div className={styles.socialIcons}>
             <a
-              href="https://alexandru-portofolio.netlify.app/"
+              href="https://prudhvi252.github.io/Portfolio-/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Website"
