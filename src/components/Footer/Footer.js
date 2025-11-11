@@ -23,7 +23,7 @@ function Footer() {
         <div className={styles.contactInfo}>
           <h4>Contact</h4>
           <p>Phone: +91 9581100738</p>
-          <p>Email: prudhviadari252@example.com</p>
+          <p>Email: prudhviadari252@gmail.com</p>
         </div>
 
         <div className={styles.quickLinks}>
