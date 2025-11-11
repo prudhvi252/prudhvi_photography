@@ -79,7 +79,7 @@
   animation-delay: 0.9s;
   background-color: transparent;
   object-fit: contain;
-  background-image: url();
+  background-image: none;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
