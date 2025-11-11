@@ -1,0 +1,121 @@
+/* Set global box-sizing to border-box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset default margins and paddings */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-family-secondary);
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+}
+
+/* Define CSS variables */
+:root {
+  /* Main colors */
+  --primary-bg-color: #f8f5f0;
+  --primary-text-color: #2c2c2c;
+  --accent-color: #b0855a;
+
+  /* Fonts */
+  --font-family-primary: "Playfair Display", serif;
+  --font-family-secondary: "Lora", serif;
+
+  /* Dimensions */
+  --hero-title-size: 48px;
+  --hero-button-padding: 10px 20px;
+  --header-height: 60px;
+  --header-bg-color: #f8f5f0;
+  --header-text-color: #2c2c2c;
+  --about-image-size: 300px;
+  --about-title-size: 36px;
+  --about-text-size: 18px;
+  --services-title-size: 36px;
+  --services-item-size: 18px;
+  --gallery-title-size: 36px;
+  --gallery-item-gap: 15px;
+  --gallery-item-radius: 8px;
+
+  /* Z-index */
+  --z-index-header: 1000;
+  --z-index-hero: 1;
+
+  /* Transitions */
+  --transition-fast: 0.3s;
+  --transition-medium: 0.5s;
+
+  /* Focus for accessibility */
+  --focus-color: #ff9800;
+}
+
+/* Responsive dimensions */
+@media (max-width: 768px) {
+  :root {
+    --hero-title-size: 36px;
+    --about-title-size: 28px;
+    --about-text-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --hero-title-size: 28px;
+    --about-title-size: 24px;
+    --about-text-size: 14px;
+  }
+}
+
+/* Ensure all media elements are responsive */
+img,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Add padding-top to .App to prevent content overlap with header */
+.App {
+  padding-top: var(--header-height);
+  overflow-x: hidden;
+  min-height: 100vh; /* Ensure .App covers entire viewport */
+}
+
+/* Hide vertical scrollbar but keep scroll functionality */
+body {
+  /* For Firefox */
+  scrollbar-width: none;
+
+  /* For IE, Edge */
+  -ms-overflow-style: none;
+}
+
+/* For Webkit (Chrome, Safari) */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Transitions on button hover */
+button {
+  transition: background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Styles for focus */
+a:focus,
+button:focus {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 4px;
+}

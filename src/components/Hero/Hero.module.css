@@ -1,0 +1,93 @@
+/* Hero */
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1726667798128-ac67fa9c869a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - var(--header-height)); /* Subtract header height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--primary-text-color);
+  position: relative;
+  z-index: var(--z-index-hero);
+  padding: 0 20px; /* Add side padding */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Overlay for contrast */
+  z-index: -1;
+}
+
+.title {
+  font-family: var(--font-family-primary);
+  font-size: var(--hero-title-size);
+  color: var(--primary-bg-color);
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.ctaButton {
+  padding: var(--hero-button-padding);
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--primary-bg-color);
+  font-size: 1rem;
+  font-family: var(--font-family-secondary);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.ctaButton:hover {
+  background-color: #8c6a45; /* A darker shade of accent color */
+  transform: translateY(-3px);
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 0 40px;
+  }
+
+  .title {
+    font-size: 2.5rem; /* Approximately 40px */
+  }
+
+  .ctaButton {
+    font-size: 0.9375rem; /* Approximately 15px */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 2rem; /* Approximately 32px */
+  }
+
+  .ctaButton {
+    font-size: 0.875rem; /* Approximately 14px */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.75rem; /* Approximately 28px */
+  }
+
+  .ctaButton {
+    font-size: 0.8125rem; /* Approximately 13px */
+    padding: 8px 16px;
+  }
+}

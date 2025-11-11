@@ -1,0 +1,110 @@
+.contact {
+  padding: 80px 20px;
+  background-color: var(--primary-bg-color);
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-family-primary);
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--primary-text-color);
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 80px;
+  height: 4px;
+  background-color: var(--accent-color);
+  transform: translateX(-50%);
+}
+
+.description {
+  font-family: var(--font-family-secondary);
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff; /* Add a white background for form */
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  font-family: var(--font-family-secondary);
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: var(--primary-text-color);
+}
+
+input,
+textarea,
+select {
+  padding: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  font-family: var(--font-family-secondary);
+  font-size: 16px;
+  background-color: #f8f8f8; /* Add a subtle background */
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent-color); /* Change border color on focus */
+}
+
+textarea {
+  resize: none;
+}
+
+.submitButton {
+  padding: 15px 30px;
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-family: var(--font-family-secondary);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.submitButton:hover {
+  background-color: darken(var(--accent-color), 10%);
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 40px 10px; /* Adjust padding for smaller screens */
+  }
+
+  .contactForm {
+    padding: 20px;
+    width: 90%; /* Allow more width on smaller screens */
+    margin: 0 auto; /* Center the form */
+  }
+}

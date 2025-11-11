@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Prudhvi Adari logo">
+  <defs>
+    <style>
+      .title { font-family: 'Playfair Display', serif; font-size: 80px; fill: #2c2c2c; font-weight:700 }
+      .subtitle { font-family: 'Lora', serif; font-size: 28px; fill: #6b6b6b }
+      .accent { fill: #b0855a }
+      .skin { fill: #f4a460 }
+      .dark { fill: #2c2c2c }
+    </style>
+    
+    <!-- Gradients for realistic lighting -->
+    <linearGradient id="skinGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffc896;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f5a87f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8956d;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="hairGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a3d2a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3d2817;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a1a0f;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="shirtGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2980b9;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1f5fa0;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="eyeGradient">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:0" />
+    </radialGradient>
+    
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="faceShadow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5"/>
+    </filter>
+  </defs>
+
+  <!-- Person Coding at Laptop with VFX -->
+  <g transform="translate(400, 180)">
+    <!-- Shadow under person -->
+    <ellipse cx="44" cy="50" rx="35" ry="8" fill="#000000" opacity="0.15"/>
+    
+    <!-- Laptop body with shadow -->
+    <rect x="-90" y="30" width="180" height="110" rx="8" fill="#2c3e50" stroke="#1a1a1a" stroke-width="2" filter="url(#shadow)"/>
+    <!-- Laptop screen with glow -->
+    <rect x="-80" y="42" width="160" height="85" rx="4" fill="#0a0a0a"/>
+    <rect x="-80" y="42" width="160" height="85" rx="4" fill="#1a1a2e" opacity="0.8"/>
+    
+    <!-- Screen glow effect (blue tint) -->
+    <rect x="-80" y="42" width="160" height="85" rx="4" fill="#0099ff" opacity="0.1" filter="url(#glow)"/>
+    
+    <!-- Screen glow/code lines with glow effect -->
+    <g filter="url(#glow)">
+      <line x1="-70" y1="55" x2="70" y2="55" stroke="#00ff88" stroke-width="2.5" opacity="0.9"/>
+      <line x1="-70" y1="67" x2="60" y2="67" stroke="#00ff88" stroke-width="2.5" opacity="0.8"/>
+      <line x1="-70" y1="79" x2="65" y2="79" stroke="#00ff88" stroke-width="2.5" opacity="0.7"/>
+      <line x1="-70" y1="91" x2="55" y2="91" stroke="#00ff88" stroke-width="2.5" opacity="0.6"/>
+      <line x1="-70" y1="103" x2="50" y2="103" stroke="#00ff88" stroke-width="2.5" opacity="0.5"/>
+    </g>
+    
+    <!-- Keyboard base -->
+    <rect x="-90" y="140" width="180" height="15" rx="3" fill="#1a1a1a"/>
+    <!-- Keyboard keys texture with depth -->
+    <rect x="-85" y="143" width="170" height="8" fill="#0a0a0a" opacity="0.7"/>
+    <rect x="-85" y="145" width="170" height="4" fill="#2a2a2a" opacity="0.4"/>
+    
+    <!-- Neck with gradient -->
+    <rect x="40" y="-35" width="8" height="15" fill="url(#skinGradient)"/>
+    
+    <!-- Head with skin gradient -->
+    <circle cx="44" cy="-55" r="22" fill="url(#skinGradient)" filter="url(#shadow)"/>
+    
+    <!-- Face side shadows for 3D effect -->
+    <ellipse cx="22" cy="-55" rx="8" ry="18" fill="#d4856d" opacity="0.25"/>
+    <ellipse cx="66" cy="-55" rx="8" ry="18" fill="#d4856d" opacity="0.15"/>
+    
+    <!-- Forehead highlight -->
+    <ellipse cx="44" cy="-70" rx="16" ry="8" fill="#ffffff" opacity="0.15"/>
+    
+    <!-- Hair with gradient and depth -->
+    <path d="M 22 -60 Q 20 -75 44 -80 Q 68 -75 66 -60" fill="url(#hairGradient)" stroke="#2a1a0f" stroke-width="1.5"/>
+    <!-- Hair side details -->
+    <path d="M 22 -50 Q 10 -55 18 -65" fill="url(#hairGradient)" opacity="0.9"/>
+    <path d="M 66 -50 Q 78 -55 70 -65" fill="url(#hairGradient)" opacity="0.9"/>
+    <!-- Hair shine/highlight -->
+    <ellipse cx="30" cy="-72" rx="8" ry="5" fill="#5a4535" opacity="0.4"/>
+    
+    <!-- Face structure shadow -->
+    <ellipse cx="44" cy="-48" rx="18" ry="16" fill="#d4856d" opacity="0.2" filter="url(#faceShadow)"/>
+    
+    <!-- Cheek blush -->
+    <ellipse cx="25" cy="-45" rx="7" ry="5" fill="#e89b7a" opacity="0.3"/>
+    <ellipse cx="63" cy="-45" rx="7" ry="5" fill="#e89b7a" opacity="0.3"/>
+    
+    <!-- Eyes with realistic details -->
+    <g filter="url(#shadow)">
+      <!-- Left eye white -->
+      <ellipse cx="34" cy="-58" rx="4" ry="5" fill="#ffffff"/>
+      <!-- Left eye iris -->
+      <ellipse cx="34" cy="-57" rx="3" ry="3.5" fill="#6b4423"/>
+      <!-- Left eye pupil -->
+      <circle cx="34" cy="-57" r="2" fill="#1a1410"/>
+      <!-- Left eye highlight -->
+      <circle cx="35.5" cy="-58" r="1.2" fill="#ffffff" opacity="0.9"/>
+      <circle cx="35" cy="-58" r="0.6" fill="#ffffff" opacity="0.5"/>
+      
+      <!-- Right eye white -->
+      <ellipse cx="54" cy="-58" rx="4" ry="5" fill="#ffffff"/>
+      <!-- Right eye iris -->
+      <ellipse cx="54" cy="-57" rx="3" ry="3.5" fill="#6b4423"/>
+      <!-- Right eye pupil -->
+      <circle cx="54" cy="-57" r="2" fill="#1a1410"/>
+      <!-- Right eye highlight -->
+      <circle cx="55.5" cy="-58" r="1.2" fill="#ffffff" opacity="0.9"/>
+      <circle cx="55" cy="-58" r="0.6" fill="#ffffff" opacity="0.5"/>
+      
+      <!-- Eye whites shine -->
+      <ellipse cx="34" cy="-60" rx="2" ry="1.5" fill="#e0e0e0" opacity="0.4"/>
+      <ellipse cx="54" cy="-60" rx="2" ry="1.5" fill="#e0e0e0" opacity="0.4"/>
+    </g>
+    
+    <!-- Eyebrows with shadow -->
+    <path d="M 30 -65 Q 34 -67 38 -65" stroke="#2a1a0f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 50 -65 Q 54 -67 58 -65" stroke="#2a1a0f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 30 -64 Q 34 -66 38 -64" stroke="#3d2817" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+    
+    <!-- Nose with shading -->
+    <path d="M 44 -52 L 44 -42" stroke="#d4856d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="40" cy="-40" r="2.5" fill="#d4856d" opacity="0.7"/>
+    <circle cx="48" cy="-40" r="2.5" fill="#d4856d" opacity="0.7"/>
+    <circle cx="40" cy="-40" r="1.5" fill="#c17a5a" opacity="0.5"/>
+    <circle cx="48" cy="-40" r="1.5" fill="#c17a5a" opacity="0.5"/>
+    
+    <!-- Mouth (smile) with depth -->
+    <path d="M 36 -35 Q 44 -30 52 -35" stroke="#c17a5a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 36 -35 Q 44 -32 52 -35" fill="#e8b5a0" opacity="0.5" filter="url(#faceShadow)"/>
+    <!-- Lip shine -->
+    <path d="M 40 -34 Q 44 -32 48 -34" stroke="#f0c5b0" stroke-width="1" opacity="0.7" stroke-linecap="round"/>
+    
+    <!-- Ears with realistic shading -->
+    <ellipse cx="22" cy="-52" rx="4" ry="8" fill="#d4856d" stroke="#c17a5a" stroke-width="1.5"/>
+    <ellipse cx="23" cy="-52" rx="2" ry="5" fill="#e89b7a" opacity="0.6"/>
+    <ellipse cx="66" cy="-52" rx="4" ry="8" fill="#d4856d" stroke="#c17a5a" stroke-width="1.5"/>
+    <ellipse cx="65" cy="-52" rx="2" ry="5" fill="#e89b7a" opacity="0.6"/>
+    
+    <!-- Body/Shirt with gradient and shadow -->
+    <path d="M 30 -35 L 26 5 Q 26 10 30 10 L 58 10 Q 62 10 62 5 L 58 -35" fill="url(#shirtGradient)" stroke="#1f5fa0" stroke-width="1.5" filter="url(#shadow)"/>
+    <!-- Shirt highlight/reflection -->
+    <ellipse cx="35" cy="-15" rx="8" ry="15" fill="#ffffff" opacity="0.1"/>
+    
+    <!-- Shirt collar -->
+    <path d="M 40 -33 L 35 -25 L 40 -20 L 45 -25 Z" fill="#1f5fa0" stroke="#1a4d7f" stroke-width="0.5"/>
+    <path d="M 48 -33 L 53 -25 L 48 -20 L 43 -25 Z" fill="#1f5fa0" stroke="#1a4d7f" stroke-width="0.5"/>
+    
+    <!-- Left arm (bent) with gradient -->
+    <defs>
+      <linearGradient id="armGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#ffc896;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#d4856d;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <path d="M 30 -20 Q 15 -15 8 0" stroke="url(#armGradient)" stroke-width="10" fill="none" stroke-linecap="round" filter="url(#shadow)"/>
+    <!-- Right arm (bent toward keyboard) -->
+    <path d="M 58 -20 Q 75 -15 85 2" stroke="url(#armGradient)" stroke-width="10" fill="none" stroke-linecap="round" filter="url(#shadow)"/>
+    
+    <!-- Hands with detailed shading -->
+    <ellipse cx="8" cy="3" rx="6" ry="7" fill="url(#skinGradient)" stroke="#c17a5a" stroke-width="1.5" filter="url(#shadow)"/>
+    <ellipse cx="85" cy="5" rx="6" ry="7" fill="url(#skinGradient)" stroke="#c17a5a" stroke-width="1.5" filter="url(#shadow)"/>
+    <!-- Hand highlights -->
+    <ellipse cx="6" cy="-1" rx="3" ry="3" fill="#ffffff" opacity="0.2"/>
+    <ellipse cx="83" cy="1" rx="3" ry="3" fill="#ffffff" opacity="0.2"/>
+    
+    <!-- Fingers with joints -->
+    <line x1="5" y1="2" x2="3" y2="8" stroke="#c17a5a" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="2.5" cy="5" r="1.5" fill="#d4856d" opacity="0.5"/>
+    <line x1="11" y1="2" x2="13" y2="8" stroke="#c17a5a" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="13.5" cy="5" r="1.5" fill="#d4856d" opacity="0.5"/>
+    <line x1="82" y1="4" x2="80" y2="10" stroke="#c17a5a" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="79.5" cy="7" r="1.5" fill="#d4856d" opacity="0.5"/>
+    <line x1="88" y1="4" x2="90" y2="10" stroke="#c17a5a" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="90.5" cy="7" r="1.5" fill="#d4856d" opacity="0.5"/>
+    
+    <!-- Legs with gradient -->
+    <defs>
+      <linearGradient id="pantGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" style="stop-color:#3d5570;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#2a3d52;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <path d="M 38 10 L 35 40" stroke="url(#pantGradient)" stroke-width="11" fill="none" stroke-linecap="round" filter="url(#shadow)"/>
+    <path d="M 50 10 L 55 40" stroke="url(#pantGradient)" stroke-width="11" fill="none" stroke-linecap="round" filter="url(#shadow)"/>
+    <!-- Leg highlights -->
+    <path d="M 39 15 L 36 35" stroke="#ffffff" stroke-width="2" opacity="0.15" stroke-linecap="round"/>
+    
+    <!-- Shoes with shine -->
+    <ellipse cx="35" cy="42" rx="7" ry="5" fill="#1a1a1a" stroke="#000000" stroke-width="1" filter="url(#shadow)"/>
+    <ellipse cx="35" cy="40" rx="5" ry="2" fill="#2a2a2a" opacity="0.6"/>
+    <ellipse cx="55" cy="42" rx="7" ry="5" fill="#1a1a1a" stroke="#000000" stroke-width="1" filter="url(#shadow)"/>
+    <ellipse cx="55" cy="40" rx="5" ry="2" fill="#2a2a2a" opacity="0.6"/>
+  </g>
+
+  <!-- Logo text -->
+  <text x="50%" y="68%" text-anchor="middle" class="title">PRUDHVI.A</text>
+  <text x="50%" y="78%" text-anchor="middle" class="subtitle">Web Developer</text>
+</svg>

@@ -1,0 +1,131 @@
+.services {
+  background-color: var(--primary-bg-color);
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--primary-text-color);
+}
+
+.servicesTitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--services-title-size);
+  margin-bottom: 80px;
+  text-align: center;
+  position: relative;
+}
+
+.servicesTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-color);
+  transform: translateX(-50%);
+}
+
+.servicesList {
+  display: flex;
+  justify-content: center; /* Center cards in row */
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px; /* Ensure max width for container */
+}
+
+.serviceItem {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 30%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  max-width: 350px; /* Set a maximum width */
+}
+
+.serviceItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  font-size: 40px;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.serviceItemTitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--services-item-size);
+  margin-bottom: 15px;
+  color: var(--primary-text-color);
+}
+
+.serviceItemText {
+  font-family: var(--font-family-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.serviceItem::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 60px;
+  height: 5px;
+  background-color: var(--accent-color);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .servicesList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .serviceItem {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .serviceItem {
+    width: 90%; /* Adjust width to not exceed margin */
+    margin-bottom: 20px;
+  }
+
+  .servicesTitle {
+    font-size: 32px;
+  }
+
+  .serviceItemTitle {
+    font-size: 20px;
+  }
+
+  .serviceItemText {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .serviceItem {
+    width: 100%;
+    max-width: 300px; /* Limit card width on small screens */
+  }
+
+  .servicesTitle {
+    font-size: 28px;
+  }
+
+  .serviceItemText {
+    font-size: 14px;
+  }
+}

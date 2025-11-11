@@ -1,0 +1,176 @@
+.pricing {
+  padding: 80px 20px;
+  background-color: var(--primary-bg-color);
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-family-primary);
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: var(--primary-text-color);
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 80px;
+  height: 4px;
+  background-color: var(--accent-color);
+  transform: translateX(-50%);
+}
+
+/* Grid adjusted to include the new package */
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.pricingCard {
+  background-color: var(--primary-bg-color);
+  padding: 60px;
+  border-radius: 10px;
+  border: 2px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+}
+
+.pricingCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.planTitle {
+  font-family: var(--font-family-primary);
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--primary-text-color);
+}
+
+.price {
+  font-family: var(--font-family-secondary);
+  font-size: 32px;
+  color: var(--accent-color);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Currency styling: make symbol slightly smaller and spaced */
+.currency {
+  font-family: var(--font-family-secondary);
+  font-size: 22px;
+  vertical-align: middle;
+  margin-right: 8px;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  font-family: var(--font-family-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.features li {
+  margin-bottom: 10px;
+}
+
+.ctaButton {
+  padding: 15px 30px;
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-family: var(--font-family-secondary);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 30px;
+}
+
+.ctaButton:hover {
+  background-color: darken(var(--accent-color), 10%);
+  transform: translateY(-3px);
+}
+
+/* Economy package (the cheapest) */
+.economy {
+  background-color: #f9f9f9;
+}
+
+.economy .planTitle,
+.economy .features {
+  color: var(--primary-text-color);
+}
+
+/* Ensure price in economy uses accent for visibility */
+.economy .price {
+  color: var(--accent-color);
+}
+
+/* Highlight the popular package */
+.popular {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.popular .planTitle,
+.popular .features {
+  color: white;
+}
+
+/* Make sure price in popular package remains white for contrast */
+.popular .price {
+  color: white;
+}
+
+.popular .ctaButton {
+  background-color: white;
+  color: var(--accent-color);
+}
+
+.popular .ctaButton:hover {
+  background-color: #f2f2f2;
+  color: var(--accent-color);
+}
+
+/* Luxury package */
+.luxury {
+  border: 3px solid var(--accent-color);
+}
+
+.luxury:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pricingCard {
+    padding: 60px;
+    max-width: 100%;
+  }
+
+  .planTitle {
+    font-size: 22px;
+  }
+
+  .price {
+    font-size: 28px;
+  }
+
+  .features {
+    font-size: 14px;
+  }
+}

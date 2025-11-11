@@ -1,0 +1,168 @@
+.collaborators {
+  padding: 100px 20px;
+  background-color: var(--primary-bg-color);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards; /* Animation for entire section appearance */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-family: var(--font-family-primary);
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: var(--primary-text-color);
+  position: relative;
+  opacity: 0;
+  animation: slideDown 0.8s ease forwards; /* Animation for title */
+  animation-delay: 0.3s;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 100px;
+  height: 4px;
+  background-color: var(--accent-color);
+  transform: translateX(-50%);
+}
+
+.partner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.2s ease forwards; /* Animation for partners section */
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  width: 220px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleIn 1s ease forwards;
+  animation-delay: 0.9s;
+  background-color: transparent;
+  object-fit: contain;
+  background-image: url();
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.info h3 {
+  font-family: var(--font-family-primary);
+  font-size: 26px;
+  color: var(--primary-text-color);
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInText 1.2s ease forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+.socialIcons {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.socialIcons a {
+  font-size: 30px;
+  color: var(--primary-text-color);
+  transition: color 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  animation: fadeInIcons 1.4s ease forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeInIcons {
+  to {
+    opacity: 1;
+  }
+}
+
+.socialIcons a:hover {
+  color: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+/* Media Query for smaller devices */
+@media (max-width: 768px) {
+  .partner {
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 160px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .socialIcons a {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partner {
+    gap: 20px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}

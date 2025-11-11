@@ -1,0 +1,57 @@
+.scrollToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+}
+
+.button {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  width: 50px; /* Fixed width */
+  height: 50px; /* Fixed height */
+  font-size: 24px; /* Icon becomes more visible */
+  border-radius: 50%; /* Ensures button stays round */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  /* Flexbox centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: #a14a1a; /* A darker shade of accent */
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Media Query for small screens (mobile devices) */
+@media (max-width: 768px) {
+  .scrollToTop {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .button {
+    width: 40px; /* Smaller dimensions for mobile */
+    height: 40px;
+    font-size: 20px; /* Slightly smaller icon */
+  }
+}
+
+/* Media Query for very small screens */
+@media (max-width: 480px) {
+  .scrollToTop {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .button {
+    width: 35px;
+    height: 35px;
+    font-size: 18px; /* Smaller icon for very small devices */
+  }
+}
